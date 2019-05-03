@@ -1,0 +1,12 @@
+.useroutput {
+  border: 1px solid black;
+  padding: 5px;
+  font-weight: bold;
+  text-align: center;
+  letter-spacing: 2px;
+  background: blue;
+  color: #fff;
+  display: inline-block;
+  margin: 10px;
+  box-shadow: 0 2px 3px #ccc;
+}
