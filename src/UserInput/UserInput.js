@@ -8,7 +8,6 @@ const userInput = (props) => {
         fontWeight: 'bold',
         textAlign: 'center',
         textTransform: 'uppercase',
-        letterSpacing: '2px',
         background: 'blue',
         color: '#fff',
         boxShadow: '0 2px 3px #ccc'
