@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import './App.css';
 import Person from './Person/Person';
-import UserOutput from './UserOutput/UserOutput';
-import UserInput from './UserInput/UserInput';
+// import UserOutput from './UserOutput/UserOutput';
+// import UserInput from './UserInput/UserInput';
 
 class App extends Component {
   state = {
@@ -27,9 +27,10 @@ class App extends Component {
   }
 
   deletePersonHandler = (personIndex) => {
-    const persons = this.state.persons;
+    // const persons = this.state.persons.slice();
+    const persons = [...this.state.persons]
     persons.splice(personIndex, 1);
-    this.setState({persons: persons})
+    this.setState({ persons: persons});
   }
 
   userNameChangeHandler = (event) => {
@@ -61,10 +62,11 @@ class App extends Component {
         <div>
 
           {this.state.persons.map((person, index) => {
-            return <Person 
-            click={() => this.deletePersonHandler(index)}
-            name={person.name} 
-            age={person.age}/>
+            return <Person
+              click={() => this.deletePersonHandler(index)}
+              name={person.name}
+              age={person.age}
+              changed={this.nameChangeHandler} />
           })}
 
         </div>
@@ -81,12 +83,12 @@ class App extends Component {
 
         {persons}
 
-        <UserOutput
+        {/* <UserOutput
           userName={this.state.userName}
         />
         <UserInput
           changed={this.userNameChangeHandler}
-          currentName={this.state.userName} />
+          currentName={this.state.userName} /> */}
       </div>
     );
 
