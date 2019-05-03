@@ -33,11 +33,11 @@ class App extends Component {
     this.setState({ persons: persons});
   }
 
-  userNameChangeHandler = (event) => {
-    this.setState({
-      userName: event.target.value
-    })
-  }
+  // userNameChangeHandler = (event) => {
+  //   this.setState({
+  //     userName: event.target.value
+  //   })
+  // }
 
   togglePersonsHandler = () => {
     const doesShow = this.state.showPersons;
